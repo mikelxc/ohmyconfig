@@ -15,7 +15,7 @@ read -p "This will overwrite your current settings and use zsh with prezto to re
 if [[ $prompt =~ [yY](es)* ]]
 then
     cd ~
-    wget https://raw.githubusercontent.com/mikelxc/ohmyzprezto/master/.zpreztorc
+    wget https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/.zpreztorc
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" && echo "fetched prezto" || echo "clone failed, please try again."
     cd $ZPREZTODIR
     git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib && "downloaded submodules"
@@ -31,12 +31,12 @@ if [ -f "$FILE" ]; then
         mv ~/.zshrc ~/.zshrc_old
         echo "Your old zsh configurations have been saved as ~/.zshrc_old"
     fi
-        setopt EXTENDED_GLOB
-        for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-        ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-else 
 fi
+
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
 
 zshlocation = $(which zsh)
 chsh -s "$zshlocation"
