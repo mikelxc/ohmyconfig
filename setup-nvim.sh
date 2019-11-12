@@ -14,7 +14,7 @@ sh ./installer.sh ~/.cache/dein
 if [ -f "~/.config/nvim/init.vim" ]; then
     echo "you have existing neovim configurations"
     read -p "Do you want to overwrite your current settings? [y/N] " prompt
-    if [[ $prompt =~ [yY](es)* ]]
+    if [[ $prompt =~ [yY] ]]
     then
         mv ~/.config/nvim/init.vim ~/.config/nvim/init_old.vim
         echo "Your old neovim configurations have been saved as ~/.config/nvim/init_old.vim"
