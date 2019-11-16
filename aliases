@@ -1,0 +1,2 @@
+alias show_files='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
+alias hide_files='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
