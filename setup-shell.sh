@@ -17,8 +17,12 @@ then
     cd ~
     wget https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/.zpreztorc
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" && echo "fetched prezto" || echo "clone failed, please try again."
+    setopt EXTENDED_GLOB
+    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+    done
     cd $ZPREZTODIR
-    git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib && "downloaded submodules"
+    git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib && echo "downloaded submodules"
 fi
 echo "---------------------------------------------------------"
 
@@ -32,11 +36,6 @@ if [ -f "$FILE" ]; then
         echo "Your old zsh configurations have been saved as ~/.zshrc_old"
     fi
 fi
-
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
 
 zshlocation = $(which zsh)
 chsh -s "$zshlocation"
