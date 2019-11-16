@@ -6,6 +6,7 @@ echo "Install Homebrew"
 declare -a taps=(
   'buo/cask-upgrade'
   'caskroom/cask'
+  'homebrew/cask-fonts'
   'caskroom/versions'
   'homebrew/bundle'
   'homebrew/core'
@@ -17,12 +18,27 @@ brew upgrade && brew update
 
 echo "Brew install Packages"
 declare -a packages=(
+  'aria2'
+  'autojump'
   'cask'
+  'docker'
+  'emacs'
+  'ffmpeg'
   'git'
+  'go'
   'mas'
+  'mongodb'
+  'mosh'
   'neovim'
   'node'
+  'python3'
+  'ruby'
+  'tmux'
   'vim'
+  'wine'
+  'winetricks'
+  'wget'
+  'youtube-dl'
 #  'zsh-autosuggestions'
 #  'zsh-completions'
 #  'zsh-syntax-highlighting'
@@ -30,19 +46,42 @@ declare -a packages=(
 echo "Brew cask app installation"
 declare -a cask_apps=(
   ‘adobe-creative-cloud’
+  'aerial'
+  'anaconda'
   ‘bartender’
   'calibre'
+  'cloudmounter'
+  'daisydisk'
+  'disk-drill'
+  'downie'
   'firefox'
   'folx'
   'forklift'
+  'font-hack-nerd-font'
   ‘google-chrome’
+  'hammerspoon'
   'iina'
   'imazing'
   ‘iterm2’
+  'jetbrains-toolbox'
+  'jupyter-notebook-viewer'
+  'karabiner-elements'
+  'keycue'
+  'kindle'
+  'nordvpn'
+  'minecraft'
+  'notion'
   ‘skype’
   ‘sublime-text’
+  'shadowsocksx-ng'
+  'steam'
+  'teamviewer'
   ‘transmit’
+  'typora'
+  'thunder'
+  'v2rayx'
   'visual-studio-code'
+  'wechat'
 )
 
 for app in "${cask_apps[@]}"; do
