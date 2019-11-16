@@ -9,17 +9,9 @@ if ! [ -x "$(command -v nvim)" ]; then
   echo 'Error: neovim is not installed.' >&2
   exit 1
 fi
+
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
-if [ -f "~/.config/nvim/init.vim" ]; then
-    echo "you have existing neovim configurations"
-    read -p "Do you want to overwrite your current settings? [y/N] " prompt
-    if [[ $prompt =~ [yY] ]]
-    then
-        mv ~/.config/nvim/init.vim ~/.config/nvim/init_old.vim
-        echo "Your old neovim configurations have been saved as ~/.config/nvim/init_old.vim"
-    fi
-else 
 mkdir ~/.config/nvim
 cd ~/.config/nvim
 wget https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/init.vim
