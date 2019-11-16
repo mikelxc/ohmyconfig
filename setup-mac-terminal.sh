@@ -5,12 +5,11 @@ echo "Install Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 declare -a taps=(
   'buo/cask-upgrade'
-  'caskroom/cask'
+  'homebrew/cask-cask'
   'homebrew/cask-fonts'
-  'caskroom/versions'
+  'homebrew/cask-versions'
   'homebrew/bundle'
   'homebrew/core'
-)
 for tap in "${taps[@]}"; do
   brew tap "$tap"
 done
@@ -43,12 +42,16 @@ declare -a packages=(
 #  'zsh-completions'
 #  'zsh-syntax-highlighting'
 )
+for pkg in "${packages[@]}"; do
+  brew cask install "$pkg"
+done
+
 echo "Brew cask app installation"
 declare -a cask_apps=(
-  ‘adobe-creative-cloud’
+  'adobe-creative-cloud'
   'aerial'
   'anaconda'
-  ‘bartender’
+  'bartender'
   'calibre'
   'cloudmounter'
   'daisydisk'
@@ -58,11 +61,11 @@ declare -a cask_apps=(
   'folx'
   'forklift'
   'font-hack-nerd-font'
-  ‘google-chrome’
+  'google-chrome'
   'hammerspoon'
   'iina'
   'imazing'
-  ‘iterm2’
+  'iterm2'
   'jetbrains-toolbox'
   'jupyter-notebook-viewer'
   'karabiner-elements'
@@ -71,12 +74,12 @@ declare -a cask_apps=(
   'nordvpn'
   'minecraft'
   'notion'
-  ‘skype’
-  ‘sublime-text’
+  'skype'
+  'sublime-text'
   'shadowsocksx-ng'
   'steam'
   'teamviewer'
-  ‘transmit’
+  'transmit'
   'typora'
   'thunder'
   'v2rayx'
