@@ -20,7 +20,6 @@ if [ -f "~/.config/nvim/init.vim" ]; then
         echo "Your old neovim configurations have been saved as ~/.config/nvim/init_old.vim"
     fi
 else 
-fi
 mkdir ~/.config/nvim
 cd ~/.config/nvim
 wget https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/init.vim
