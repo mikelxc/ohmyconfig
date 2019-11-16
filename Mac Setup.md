@@ -38,15 +38,22 @@ Here's a list of all the applications I've been using and where I got them
 - [Expressions](https://apps.apple.com/cn/app/expressions/id913158085?l=en&mt=12)
 - [Jump Desktop](https://apps.apple.com/cn/app/jump-desktop-rdp-vnc-fluid/id524141863?l=en&mt=12)
 - [Pixelmator pro](https://apps.apple.com/cn/app/pixelmator-pro/id1289583905?l=en&mt=12)
+- [Polarr](https://apps.apple.com/cn/app/polarr-photo-editor-pro/id1058273036?l=en&mt=12)
 - [Data Graph](https://apps.apple.com/cn/app/datagraph/id407412840?l=en&mt=12)
 - [MWeb](https://apps.apple.com/cn/app/mweb/id1403919533?l=en&mt=12)
 - [TexPad](https://apps.apple.com/cn/app/texpad-latex-editor/id458866234?l=en&mt=12)
+- [iStudiez Pro](https://apps.apple.com/cn/app/istudiez-pro-legendary-planner/id402989379?l=en&mt=12)
 ### System Extensions
 - [Moom](https://apps.apple.com/cn/app/moom/id419330170?l=en&mt=12)
 - [Hyper Dock](https://apps.apple.com/cn/app/hyperdock/id449830122?l=en&mt=12)
 - [Haze Over](https://apps.apple.com/cn/app/hazeover-distraction-dimmer/id430798174?l=en&mt=12)
 - [Drop Zone](https://apps.apple.com/cn/app/dropzone-3/id695406827?l=en&mt=12)
 - [Unclutter](https://apps.apple.com/cn/app/unclutter/id577085396?l=en&mt=12)
+- [PopClip](https://apps.apple.com/cn/app/popclip/id445189367?l=en&mt=12)
 ### Safari Extensions
 - [DarkReader](https://apps.apple.com/cn/app/dark-reader-for-safari/id1438243180?l=en&mt=12)
 - [Cascadea](https://apps.apple.com/cn/app/cascadea/id1432182561?l=en&mt=12)
+
+3. Setup Command Line
+Automatic installation: you can get every packages and configs I have by running the bash script.
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/setup-mac-terminal.sh)"`
