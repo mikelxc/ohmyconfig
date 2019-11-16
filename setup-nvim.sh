@@ -23,6 +23,6 @@ else
 fi
 mkdir ~/.config/nvim
 cd ~/.config/nvim
-curl https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/init.vim
+wget https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/init.vim
 nvim -c call dein#install()
 nvim -c CocInstall coc-tsserver coc-json coc-html coc-css coc-python coc-tabnine
