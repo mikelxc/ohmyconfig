@@ -15,5 +15,3 @@ sh ./installer.sh ~/.cache/dein
 mkdir ~/.config/nvim
 cd ~/.config/nvim
 wget https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/init.vim
-nvim -c call dein#install()
-nvim -c CocInstall coc-tsserver coc-json coc-html coc-css coc-python coc-tabnine
