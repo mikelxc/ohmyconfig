@@ -43,7 +43,7 @@ declare -a packages=(
 #  'zsh-syntax-highlighting'
 )
 for pkg in "${packages[@]}"; do
-  brew cask install "$pkg"
+  brew install "$pkg"
 done
 
 echo "Brew cask app installation"
