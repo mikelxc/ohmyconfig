@@ -144,3 +144,9 @@ Install homebrew and my packages
    "VisualStudioExptTeam.vscodeintellicode"
    "vscodevim.vim"
    "Shan.code-settings-sync"`
+ -3.4 GPG and SSH keys
+  -generate gpg key for signing
+  `gpg --full-generate-key` select RSA and RSA, and 4096
+  `git config --global user.signingkey` tell git to use the key for signing
+  -generate ssh key for servers
+  `ssh-keygen -t rsa`

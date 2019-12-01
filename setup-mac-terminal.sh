@@ -25,6 +25,7 @@ declare -a packages=(
   'ffmpeg'
   'git'
   'go'
+  'gpg2'
   'mas'
   'mongodb'
   'mosh'
