@@ -67,6 +67,7 @@ Install homebrew and my packages
   'ffmpeg'
   'git'
   'go'
+  'gpg2'
   'mas'
   'mongodb'
   'mosh'
