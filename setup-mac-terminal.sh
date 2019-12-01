@@ -38,9 +38,6 @@ declare -a packages=(
   'winetricks'
   'wget'
   'youtube-dl'
-#  'zsh-autosuggestions'
-#  'zsh-completions'
-#  'zsh-syntax-highlighting'
 )
 for pkg in "${packages[@]}"; do
   brew install "$pkg"
@@ -92,4 +89,37 @@ declare -a cask_apps=(
 
 for app in "${cask_apps[@]}"; do
   brew cask install "$app"
+done
+
+echo "VSCode Extensions installation"
+
+cat << EOF >> ~/.zshrc
+# Add Visual Studio Code (code)
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+EOF
+
+declare -a vscode_ext=(
+   "christian-kohler.path-intellisense"
+   "CoenraadS.bracket-pair-colorizer-2"
+   "dbaeumer.vscode-eslint"
+   "ecmel.vscode-html-css"
+   "Equinusocio.vsc-material-theme"
+   "esbenp.prettier-vscode"
+   "formulahendry.auto-rename-tag"
+   "ginfuru.ginfuru-better-solarized-dark-theme"
+   "humao.rest-client"
+   "ms-azuretools.vscode-docker"
+   "ms-python.anaconda-extension-pack"
+   "ms-python.python"
+   "oderwat.indent-rainbow"
+   "PKief.material-icon-theme"
+   "pranaygp.vscode-css-peek"
+   "redhat.vscode-yaml"
+   "TabNine.tabnine-vscode"
+   "VisualStudioExptTeam.vscodeintellicode"
+   "vscodevim.vim"
+   "Shan.code-settings-sync"
+   )
+for ext in "${vscode_ext[@]}"; do
+  code --install-extension "$ext"
 done
