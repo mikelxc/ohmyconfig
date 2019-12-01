@@ -57,7 +57,7 @@ Here's a list of all the applications I've been using and where I got them
 3. Setup Command Line
 Automatic installation: you can get every packages and configs I have by running the bash script.
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/setup-mac-terminal.sh)"`
-3.1 Homebrew
+- 3.1 Homebrew
 Install homebrew and my packages
   `'aria2'
   'autojump'
@@ -80,7 +80,7 @@ Install homebrew and my packages
   'winetricks'
   'wget'
   'youtube-dl'`
- 3.2 Brew Casks
+ - 3.2 Brew Casks
  This will install all my apps that are not available in MAS
  `'adobe-creative-cloud'
   'aerial'
@@ -122,7 +122,7 @@ Install homebrew and my packages
   'v2rayx'
   'visual-studio-code'
   'wechat'`
- 3.3 VSCode extensions
+ - 3.3 VSCode extensions
  `"christian-kohler.path-intellisense"
    "CoenraadS.bracket-pair-colorizer-2"
    "dbaeumer.vscode-eslint"
