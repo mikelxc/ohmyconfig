@@ -13,7 +13,54 @@ Join your Wi-Fi, log in your apple ID, run through all the settings, you know th
 2. Install Softwares
 
 Here's a list of all the applications I've been using and where I got them
-
+`836500024 WeChat (2.3.28)
+1432182561 Cascadea (1.4.4)
+695406827 Dropzone 3 (3.7.0)
+462058435 Microsoft Excel (16.31)
+407412840 DataGraph (4.5)
+1173932628 Drop (1.5.2)
+449830122 HyperDock (1.7)
+634148309 Logic Pro X (10.4.7)
+1403919533 MWeb (3.3.3)
+497799835 Xcode (11.2.1)
+402989379 iStudiez Pro (2.0)
+462054704 Microsoft Word (16.31)
+736189492 Notability (4.1.3)
+458866234 Texpad (1.8.14)
+424389933 Final Cut Pro (10.4.7)
+577085396 Unclutter (2.1.19)
+1035137927 KeyKey (2.9)
+1233048948 Boom 3D (1.3.3)
+1438243180 Dark Reader for Safari (1.3.3)
+1055273043 PDF Expert (2.4.30)
+1441958036 SideNotes (1.0.2)
+1289583905 Pixelmator Pro (1.5.2)
+1058273036 Polarr Photo Editor (5.10.4)
+524141863 Jump Desktop (8.4.8)
+425424353 The Unarchiver (4.1.0)
+462062816 Microsoft PowerPoint (16.31)
+556381974 IconFly (3.9.2)
+434290957 Motion (5.4.4)
+687301476 FineReader OCR Pro (12.1.13)
+445189367 PopClip (2019.9.1)
+419330170 Moom (3.2.16)
+823766827 OneDrive (19.152.1013)
+913158085 Expressions (1.3.1)
+1444293493 Total War: THREE KINGDOMS (1.0.5)
+1481302432 Instapaper (1.0)
+1055511498 Day One (4.3.0)
+424390742 Compressor (4.4.5)
+409201541 Pages (8.2.1)
+1480793815 GoodNotes (5.3.11)
+784801555 Microsoft OneNote (16.31)
+406056744 Evernote (7.13)
+985367838 Microsoft Outlook (16.31)
+1444998321 Permute 3 (3.3.9)
+427575699 DEVONthink (2.11.3)
+775737590 iA Writer (5.3.2)
+430798174 HazeOver (1.8.5)
+409183694 Keynote (9.2.1)
+1107421413 1Blocker (3.0.3)`
 - Mac App Store Essentials
 *Most of the Apps are purchased in China, so the links are sending you to the Chinese MAS*
   - [Xcode](https://apps.apple.com/cn/app/xcode/id497799835?l=en&mt=12)
@@ -87,6 +134,7 @@ Install homebrew and my packages
   'aerial'
   'anaconda'
   'bartender'
+  'bettertouchtool'
   'calibre'
   'cloudmounter'
   'daisydisk'
