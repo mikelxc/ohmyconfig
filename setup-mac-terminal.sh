@@ -91,7 +91,8 @@ declare -a cask_apps=(
 for app in "${cask_apps[@]}"; do
   brew cask install "$app"
 done
-
+echo "Install iterm2 integration"
+curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 echo "VSCode Extensions installation"
 
 cat << EOF >> ~/.zshrc
