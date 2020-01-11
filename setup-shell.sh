@@ -11,9 +11,7 @@ if ! [ -x "$(command zsh)" ]; then
   exit 1
 fi
 
-read -p "This will overwrite your current settings and use zsh with prezto to replace your current shell. Are you sure you want to continue? [y/N] " prompt
-if [[ $prompt =~ [yY](es)* ]]
-then
+
     cd ~
     wget https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/.zpreztorc
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" && echo "fetched prezto" || echo "clone failed, please try again."
@@ -23,7 +21,7 @@ then
     done
     cd $ZPREZTODIR
     git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib && echo "downloaded submodules"
-fi
+
 echo "---------------------------------------------------------"
 
 FILE= ~/.zshrc
