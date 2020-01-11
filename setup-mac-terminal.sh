@@ -16,8 +16,11 @@ done
 brew upgrade && brew update
 
 echo "Brew install Packages"
+
 declare -a packages=(
   'aria2'
+  'autoconf'
+  'automake'
   'autojump'
   'cask'
   'docker'
@@ -28,7 +31,6 @@ declare -a packages=(
   'gpg2'
   'mas'
   'mongodb'
-  'mosh'
   'neovim'
   'node'
   'python3'
@@ -40,6 +42,10 @@ declare -a packages=(
   'wget'
   'youtube-dl'
 )
+
+#added seperately to have the lastest mosh with true color support, can be removed when the latest mosh updates
+brew install --HEAD mosh
+
 for pkg in "${packages[@]}"; do
   brew install "$pkg"
 done
@@ -50,6 +56,7 @@ declare -a cask_apps=(
   'aerial'
   'anaconda'
   'bartender'
+  'bettertouchtool'
   'calibre'
   'cloudmounter'
   'daisydisk'
@@ -58,7 +65,6 @@ declare -a cask_apps=(
   'firefox'
   'folx'
   'forklift'
-  'font-hack-nerd-font'
   'font-firacode-nerd-font'
   'google-chrome'
   'hammerspoon'
