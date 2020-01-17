@@ -10,6 +10,7 @@ declare -a taps=(
   'homebrew/cask-versions'
   'homebrew/bundle'
   'homebrew/core'
+)
 for tap in "${taps[@]}"; do
   brew tap "$tap"
 done
