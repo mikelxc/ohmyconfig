@@ -10,30 +10,35 @@ if ! [ -x "$(command zsh)" ]; then
   echo 'Error: zsh is not installed.' >&2
   exit 1
 fi
+cd ~
+wget https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/.zpreztorc
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" && echo "fetched prezto" || echo "clone failed, please try again."
 
-
-    cd ~
-    wget https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/.zpreztorc
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" && echo "fetched prezto" || echo "clone failed, please try again."
-    setopt EXTENDED_GLOB
-    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-    done
-    cd $ZPREZTODIR
-    git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib && echo "downloaded submodules"
-
-echo "---------------------------------------------------------"
+cd ~/.zprezto
+git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib && echo "downloaded submodules"
 
 FILE= ~/.zshrc
 if [ -f "$FILE" ]; then
     echo "you have existing zsh configurations"
-    read -p "Do you want to overwrite your current settings? [y/N] " prompt
-    if [[ $prompt =~ [yY](es)* ]]
-    then
-        mv ~/.zshrc ~/.zshrc_old
-        echo "Your old zsh configurations have been saved as ~/.zshrc_old"
-    fi
+    mv ~/.zshrc ~/.zshrc_old
+    echo "Your old zsh configurations have been saved as ~/.zshrc_old"
 fi
+
+declare -a rcfile=(
+  '~/.zprezto/runcoms/zlogin'
+  '~/.zprezto/runcoms/zlogout'
+  '~/.zprezto/runcoms/zprofile'
+  '~/.zprezto/runcoms/zshenv'
+  '~/.zprezto/runcoms/zshrc'
+)
+
+for rcfile in "${rcfile[@]}"; do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+
+
+echo "---------------------------------------------------------"
+
 
 zshlocation = $(which zsh)
 chsh -s "$zshlocation"
