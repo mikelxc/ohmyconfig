@@ -12,10 +12,10 @@ if ! [ -x "$(command zsh)" ]; then
 fi
 cd ~
 wget https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/.zpreztorc
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" && echo "fetched prezto" || echo "clone failed, please try again."
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 cd ~/.zprezto
-git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib && echo "downloaded submodules"
+git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib
 
 FILE= ~/.zshrc
 if [ -f "$FILE" ]; then
