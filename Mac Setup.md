@@ -62,7 +62,7 @@ Here's a list of all the applications I've been using and where I got them
 409183694 Keynote (9.2.1)
 1107421413 1Blocker (3.0.3)`
 - Mac App Store Essentials
-*Most of the Apps are purchased in China, so the links are sending you to the Chinese MAS*
+*My apple ID location is China, so some of the links might redirect you to the Chinese MAS*
   - [Xcode](https://apps.apple.com/cn/app/xcode/id497799835?l=en&mt=12)
   - [Evernote](https://apps.apple.com/cn/app/evernote/id406056744?l=en&mt=12)
   - [Office](https://office.com)
@@ -104,6 +104,7 @@ Here's a list of all the applications I've been using and where I got them
 3. Setup Command Line
 Automatic installation: you can get every packages and configs I have by running the bash script.
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/setup-mac-terminal.sh)"`
+For more information, please refer my [Command-line setup](https://github.com/mikelxc/ohmyconfig/blob/master/setup-shell.sh)
 - 3.1 Homebrew
 Install homebrew and my packages
   `'aria2'
@@ -171,6 +172,7 @@ Install homebrew and my packages
   'v2rayx'
   'visual-studio-code'
   'wechat'`
+ *Below this line are for my development environmnets*
  - 3.3 VSCode extensions
  `"christian-kohler.path-intellisense"
    "CoenraadS.bracket-pair-colorizer-2"
@@ -192,9 +194,12 @@ Install homebrew and my packages
    "VisualStudioExptTeam.vscodeintellicode"
    "vscodevim.vim"
    "Shan.code-settings-sync"`
- -3.4 GPG and SSH keys
+ - 3.4 GPG and SSH keys
   -generate gpg key for signing
   `gpg --full-generate-key` select RSA and RSA, and 4096
   `git config --global user.signingkey` tell git to use the key for signing
   -generate ssh key for servers
   `ssh-keygen -t rsa`
+ - 3.5 npm packages
+  `"tldr"
+  `
