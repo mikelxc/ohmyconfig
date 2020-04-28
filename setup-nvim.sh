@@ -15,3 +15,4 @@ sh ./installer.sh ~/.cache/dein
 mkdir ~/.config/nvim
 cd ~/.config/nvim
 wget https://raw.githubusercontent.com/mikelxc/ohmyconfig/master/init.vim
+nvim --headless +'call dein#install()' +q

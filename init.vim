@@ -19,12 +19,12 @@ if dein#load_state('~/.cache/dein')
   call dein#add('mhinz/vim-startify')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('Shougo/echodoc')
-"  call dein#add('taigacute/spaceline.vim')
   call dein#add('frankier/neovim-colors-solarized-truecolor-only')
   call dein#add('tpope/vim-commentary')
   call dein#add('vim-airline/vim-airline')
   call dein#add('tpope/vim-surround')
   call dein#add('terryma/vim-multiple-cursors')
+  call dein#add('honza/vim-snippets')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
@@ -46,3 +46,5 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['coc']
+
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
