@@ -19,8 +19,9 @@ if dein#load_state('~/.cache/dein')
   call dein#add('mhinz/vim-startify')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('Shougo/echodoc')
-  call dein#add('frankier/neovim-colors-solarized-truecolor-only')
   call dein#add('tpope/vim-commentary')
+  call dein#add('justinmk/vim-sneak')
+  call dein#add('arcticicestudio/nord-vim') 
   call dein#add('vim-airline/vim-airline')
   call dein#add('tpope/vim-surround')
   call dein#add('terryma/vim-multiple-cursors')
@@ -39,9 +40,7 @@ syntax enable
 inoremap `` <Esc>`^
 set termguicolors
 set background=dark
-colorscheme solarized
-"let g:spaceline_seperate_style= 'arrow-fade'
-"let g:spaceline_colorscheme = 'solarized_dark'
+colorscheme nord
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
